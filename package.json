@@ -1,0 +1,27 @@
+{
+  "name": "13.5",
+  "version": "1.0.0",
+  "description": "Kodilla task 13.9 - Site for uploading files and pictures ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/arti-zachara/13.5-Uploader.git"
+  },
+  "keywords": [
+    "upload",
+    "images",
+    "pictures",
+    "node.js"
+  ],
+  "author": "arti Zachara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arti-zachara/13.5-Uploader/issues"
+  },
+  "homepage": "https://github.com/arti-zachara/13.5-Uploader#readme"
+}
