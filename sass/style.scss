@@ -41,6 +41,8 @@ h2 {
   bottom: 10px;
   right: 10px;
   height: 25vh;
+  border: 0;
+  box-shadow: none;
 }
 .upload_wrapper {
   margin: 10px;
@@ -78,4 +80,36 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: rgb(122, 173, 164);
+}
+img {
+  max-width: 90vw;
+  height: auto;
+  max-height: 70vh;
+
+  border: 8px solid white;
+  box-shadow: 4px 4px 6px black;
+  border-radius: 5px;
+  display: block;
+  margin: 10px 5vw;
+}
+
+.go_back {
+  background-color: rgb(122, 173, 164);
+  padding: 8px;
+  display: block;
+  float: left;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  width: 250px;
+  margin: 10px;
+  transition: background-color 0.35s ease-in-out;
+}
+.go_back:hover {
+  background-color: rgb(83, 133, 124);
+  cursor: pointer;
+}
+.go_back a {
+  color: white;
+  text-decoration: none;
 }
