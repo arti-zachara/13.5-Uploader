@@ -30,6 +30,22 @@ exports.show = function(request, response) {
   });
 };
 
+exports.css = function(request, response) {
+  fs.readFile("css/style.css", function(error, file) {
+    response.writeHead(200, { "Content-Type": "text/css" });
+    response.write(file, "binary");
+    response.end();
+  });
+};
+
+exports.serverImage = function(request, response) {
+  fs.readFile("images/server.png", function(error, file) {
+    response.writeHead(200, { "Content-Type": "image/jpg" });
+    response.write(file, "binary");
+    response.end();
+  });
+};
+
 exports.error = function(request, response) {
   console.log("Nie wiem co robić.");
   fs.readFile("templates/404.jpg", function(err, data) {

@@ -2,16 +2,28 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple images uploader</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
   <body>
-    <h1>Wgraj plik</h1>
-    <form action="/upload" enctype="multipart/form-data" method="post">
-      <label>Tytuł pliku</label>
-      <input type="text" name="title" />
-      <br />
-      <label>Plik</label>
-      <input type="file" name="upload" multiple="multiple" /><br />
-      <input type="submit" value="Wyślij" />
-    </form>
+    <section class="container">
+      <h1>Zapraszam do przesłania pliku graficznego</h1>
+      <div class="file_box">
+        <h2>Wgraj plik</h2>
+        <form action="/upload" enctype="multipart/form-data" method="post">
+          <div class="upload_wrapper">
+            <input type="file" name="upload" multiple="multiple" /><br />
+          </div>
+
+          <input type="submit" value="Wyślij" />
+        </form>
+        <img src="/images/server.png" alt="server" />
+      </div>
+    </section>
   </body>
 </html>

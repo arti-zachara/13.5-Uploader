@@ -27,6 +27,12 @@ function start() {
       case "/show":
         handlers.show(request, response);
         break;
+      case "/css/style.css":
+        handlers.css(request, response);
+        break;
+      case "/images/server.png":
+        handlers.serverImage(request, response);
+        break;
       default:
         handlers.error(request, response);
     }
