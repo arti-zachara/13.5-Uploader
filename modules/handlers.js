@@ -1,5 +1,10 @@
+"use strict";
+
 var fs = require("fs");
 var formidable = require("formidable");
+
+//my variables
+var fileUrl;
 
 exports.upload = function(request, response) {
   console.log("Rozpoczynam obsługę żądania upload.");
