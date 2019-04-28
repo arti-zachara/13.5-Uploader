@@ -6,12 +6,12 @@ function start() {
   function onRequest(request, response) {
     console.log("Odebrano zapytanie.");
     console.log("Zapytanie " + request.url + " odebrane.");
-    if (request.url === "/favicon.ico") {
-      response.writeHead(200, { "Content-Type": "image/x-icon" });
-      response.end();
-      console.log("favicon requested");
-      return;
-    }
+    // if (request.url === "/favicon.ico") {
+    //   response.writeHead(200, { "Content-Type": "image/x-icon" });
+    //   response.end();
+    //   console.log("favicon requested");
+    //   return;
+    // }
     response.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
 
     switch (

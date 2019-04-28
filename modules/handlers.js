@@ -29,3 +29,13 @@ exports.show = function(request, response) {
     response.end();
   });
 };
+
+exports.error = function(request, response) {
+  console.log("Nie wiem co robić.");
+  fs.readFile("templates/404.jpg", function(err, data) {
+    response.statusCode = 404;
+    if (!err) response.write(data);
+    // err handling
+    response.end();
+  });
+};

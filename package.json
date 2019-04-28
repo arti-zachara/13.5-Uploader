@@ -4,10 +4,11 @@
   "description": "Kodilla task 13.9 - Site for uploading files and pictures ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "test": "npm run test:html && npm run test:js",
+    "test:html": "glob-run nu-html-checker *.html",
+    "test:js": "jshint js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "init:npm-install": "npm install"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
   },
   "homepage": "https://github.com/arti-zachara/13.5-Uploader#readme",
   "dependencies": {
+    "nodemon": "^1.15.1",
     "colors": "^1.3.3",
-    "formidable": "^1.2.1"
+    "formidable": "^1.2.1",
+    "jshint": "^2.9.5"
   }
 }
