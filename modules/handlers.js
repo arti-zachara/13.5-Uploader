@@ -3,7 +3,7 @@
 var fs = require("fs");
 var formidable = require("formidable");
 
-//my variables
+// file's path after upload
 var fileUrl;
 
 exports.upload = function(request, response) {
@@ -12,7 +12,6 @@ exports.upload = function(request, response) {
   form.keepExtensions = true;
   form.parse(request, function(error, fields, files) {
     fileUrl = "upload/" + files.upload.name;
-    fileUrl = fileUrl.toString();
     fs.rename(files.upload.path, fileUrl, function(err) {
       if (err) throw error;
       console.log("Zmieniono katalog plików");
@@ -20,7 +19,7 @@ exports.upload = function(request, response) {
     fs.readFile("templates/upload.html", function(err, html) {
       response.writeHead("200", { "Content-Type": "text/html; charset=utf-8" });
       response.write(html);
-      response.write("<img src='/show' />");
+      // image embeded in the html code with /show
       response.end();
     });
   });

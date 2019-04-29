@@ -92,12 +92,16 @@ img {
   display: block;
   margin: 10px 5vw;
 }
-
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 .go_back {
   background-color: rgb(122, 173, 164);
   padding: 8px;
-  display: block;
-  float: left;
+  align-self: flex-start;
   border-radius: 10px;
   font-size: 1rem;
   border: none;
